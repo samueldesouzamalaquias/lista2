@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input placeholder="Item"
+        class="js-input">
+
+        <button onclick="
+            lista.push(promptInput.value);
+            promptInput.value = ''
+            elemPar.innerText = lista
+            ">
+            adicionar
+        </button>
+
+        <button onclick="
+
+           const novaLista = []
+            for (i=0; i < lista.length; i++) {
+                if (lista[i] !== promptInput.value) {
+                let item = lista[i]
+                novaLista.push(item)
+                }
+            }
+            lista = novaLista
+            elemPar.innerText = lista
+            promptInput.value = ''
+        ">
+            remover
+        </button>
+
+        <button onclick="
+            elemPar.innerText = lista
+        ">
+            mostrar
+        </button>
+
+        <button onclick="
+            localStorage.setItem('lista', JSON.stringify(lista));
+            alert('Salvo com sucesso.')
+        ">
+            salvar
+        </button>
+
+        <p class="js-p"></p>
+
+        <script src="minha-lista.js"></script>
+    </body>
+</html>
