@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link>
     </head>
     <body>
         <input placeholder="Item"
         class="js-input">
 
-        <button onclick="
+        <button class="adicionar" 
+            onclick="
             lista.push(promptInput.value);
             promptInput.value = ''
             elemPar.innerText = lista
@@ -15,8 +16,8 @@
             adicionar
         </button>
 
-        <button onclick="
-
+        <button class="remover" 
+            onclick="
            const novaLista = []
             for (i=0; i < lista.length; i++) {
                 if (lista[i] !== promptInput.value) {
@@ -31,13 +32,15 @@
             remover
         </button>
 
-        <button onclick="
+        <button class="mostrar"
+            onclick="
             elemPar.innerText = lista
         ">
             mostrar
         </button>
 
-        <button onclick="
+        <button class="salvar"
+            onclick="
             localStorage.setItem('lista', JSON.stringify(lista));
             alert('Salvo com sucesso.')
         ">
