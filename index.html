@@ -1,51 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gerador de lista</title>
-        <link class="input" rel="stylesheet" href="styles.css">
-        <style>
-            input {
-    width: 797px;
-    height: 50px;
-    font-size: 18px;
-    padding-left: 10px;
-}
+        <title>
 
-.adicionar {
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.remover {
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.mostrar {
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.salvar {
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: bold;
-}
-        </style>
+        </title>
+        <link class="input" rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div>
-            <input type="texto" placeholder="Item">
+            <input id="input" type="texto" placeholder="Item">
         </div>
         <button class="adicionar" 
             onclick="
             lista.push(promptInput.value);
-            promptInput.value = ''
-            elemPar.innerText = lista
+            promptInput.value = '';
+            elemPar.innerText = lista;
             ">
             adicionar
         </button>
@@ -55,20 +24,20 @@
            const novaLista = []
             for (i=0; i < lista.length; i++) {
                 if (lista[i] !== promptInput.value) {
-                let item = lista[i]
-                novaLista.push(item)
+                let item = lista[i];
+                novaLista.push(item);
                 }
             }
-            lista = novaLista
-            elemPar.innerText = lista
-            promptInput.value = ''
+            lista = novaLista;
+            elemPar.innerText = lista;
+            promptInput.value = '';
         ">
             remover
         </button>
 
         <button class="mostrar"
             onclick="
-            elemPar.innerText = lista
+            elemPar.innerText = lista;
         ">
             mostrar
         </button>
@@ -76,12 +45,12 @@
         <button class="salvar"
             onclick="
             localStorage.setItem('lista', JSON.stringify(lista));
-            alert('Salvo com sucesso.')
+            alert('Salvo com sucesso.');
         ">
             salvar
         </button>
 
-        <p class="js-p"></p>
+        <p id="p" class="js-p"></p>
 
         <script src="minha-lista.js"></script>
     </body>
