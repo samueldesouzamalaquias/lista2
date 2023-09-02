@@ -4,12 +4,11 @@ if (!lista) {
     lista = [];
 } 
 
-let promptInput = document.querySelector('.js-input');
+let promptInput = document.getElementById("input");
 
 let itemInput = promptInput.value;
-console.log(itemInput)
 
 let elemDiv = document.querySelector('.js-div');
 
-let elemPar = document.querySelector('.js-p');
+let elemPar = document.getElementById("p");
 console.log(typeof elemPar);
